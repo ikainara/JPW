@@ -35,12 +35,12 @@ public class BrowserParameterResolver implements ParameterResolver {
 
     private static Browser createBrowser(ExtensionContext extensionContext, Playwright playwright) {
         var config = getPwConfig(extensionContext);
-        Browser browser = null;
+        Browser browser;
         switch (config.getOptions().browserName) {
-            case "CHROME" -> browser = playwright.chromium().launch(config.getOptions().launchOptions);
-            case "FIREFOX" -> browser = playwright.firefox().launch(config.getOptions().launchOptions);
-            case "EDGE" -> browser = playwright.webkit().launch(config.getOptions().launchOptions);
-            default -> throw new PlaywrightException("Unknown browser " + config.getOptions().browserName + "Known list: ");
+            case BrowserName.CHROME -> browser = playwright.chromium().launch(config.getOptions().launchOptions);
+            case BrowserName.FIREFOX -> browser = playwright.firefox().launch(config.getOptions().launchOptions);
+            case BrowserName.EDGE -> browser = playwright.webkit().launch(config.getOptions().launchOptions);
+            default -> throw new PlaywrightException("Unknown browser '" + config.getOptions().browserName + "'. Known list: " + BrowserName.getBrowsers());
         }
         return browser;
     }
