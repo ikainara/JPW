@@ -6,8 +6,6 @@ import lombok.SneakyThrows;
 import org.jetbrains.annotations.Nullable;
 import org.junit.jupiter.api.extension.ExtensionContext;
 
-import java.lang.annotation.Annotation;
-
 public class ExtensionContextUtils {
     private static final ExtensionContext.Namespace JPW_NAMESPACE = ExtensionContext.Namespace.create(JPw.class);
     private static final String PW_CONFIG_ID = "pwConfig";
@@ -29,7 +27,7 @@ public class ExtensionContextUtils {
     @SneakyThrows
     public static OptionsFactory getPwConfig(ExtensionContext extensionContext) {
         var configuration = getObjectFromContext(extensionContext, PW_CONFIG_ID, OptionsFactory.class);
-        Class<? extends OptionsFactory> configClass = null;
+        Class<? extends OptionsFactory> configClass;
         if(configuration == null) {
             try {
                 configClass = extensionContext.getRequiredTestMethod().getAnnotation(UseJPWConfig.class).value();

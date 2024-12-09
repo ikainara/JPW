@@ -7,5 +7,6 @@ public class SampleTest {
     @Test
     public void myTest(Page page) {
         page.navigate("/");
+        assert page.locator("div").all().get(0).isVisible();
     }
 }

@@ -1,5 +1,6 @@
 package utils;
 
+import org.jetbrains.annotations.Nullable;
 import org.junit.jupiter.api.extension.ExtensionContext;
 
 import java.lang.annotation.Annotation;
@@ -11,6 +12,7 @@ public class AnnotationUtils {
                 extensionContext.getRequiredTestMethod().isAnnotationPresent(clazz);
     }
 
+    @Nullable
     public static AnnotatedElement getAnnotatedElement(ExtensionContext extensionContext, Class<? extends Annotation> clazz) {
         if(extensionContext.getRequiredTestMethod().isAnnotationPresent(clazz)) {
             return extensionContext.getRequiredTestMethod();
