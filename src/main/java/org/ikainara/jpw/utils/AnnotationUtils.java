@@ -1,4 +1,4 @@
-package utils;
+package org.ikainara.jpw.utils;
 
 import org.jetbrains.annotations.Nullable;
 import org.junit.jupiter.api.extension.ExtensionContext;

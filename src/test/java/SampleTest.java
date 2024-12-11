@@ -1,4 +1,4 @@
-import annotations.UseJPWConfig;
+import org.ikainara.jpw.annotations.UseJPWConfig;
 import com.microsoft.playwright.Page;
 import org.junit.jupiter.api.Test;
 

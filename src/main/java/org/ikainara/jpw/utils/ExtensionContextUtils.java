@@ -1,6 +1,6 @@
-package utils;
+package org.ikainara.jpw.utils;
 
-import annotations.UseJPWConfig;
+import org.ikainara.jpw.annotations.UseJPWConfig;
 import com.microsoft.playwright.junit.OptionsFactory;
 import lombok.SneakyThrows;
 import org.jetbrains.annotations.Nullable;

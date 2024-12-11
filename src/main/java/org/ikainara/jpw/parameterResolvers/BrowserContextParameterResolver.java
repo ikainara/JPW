@@ -1,4 +1,4 @@
-package parameterResolvers;
+package org.ikainara.jpw.parameterResolvers;
 
 import com.microsoft.playwright.BrowserContext;
 import org.junit.jupiter.api.extension.ExtensionContext;
@@ -6,7 +6,7 @@ import org.junit.jupiter.api.extension.ParameterContext;
 import org.junit.jupiter.api.extension.ParameterResolutionException;
 import org.junit.jupiter.api.extension.ParameterResolver;
 
-import static utils.ExtensionContextUtils.*;
+import static org.ikainara.jpw.utils.ExtensionContextUtils.*;
 public class BrowserContextParameterResolver implements ParameterResolver {
     final static String id = "browserContext";
     @Override

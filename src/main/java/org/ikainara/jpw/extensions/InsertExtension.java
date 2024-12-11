@@ -1,7 +1,8 @@
-package parameterResolvers;
+package org.ikainara.jpw.extensions;
 
-import annotations.Insert;
+import org.ikainara.jpw.annotations.Insert;
 import com.microsoft.playwright.Page;
+import org.ikainara.jpw.parameterResolvers.PwPageParameterResolver;
 import org.junit.jupiter.api.extension.BeforeEachCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
 
@@ -21,7 +22,7 @@ public class InsertExtension implements BeforeEachCallback {
                 field.set(testInstance, constructor.newInstance(page));
             } catch (Exception e) {
                 throw new RuntimeException("Field '" + field.getName() + "' annotated with Insert annotation, but it class "
-                        + field.getType().getTypeName() + "has no public constructor with Page.class parameter");
+                        + field.getType().getTypeName() + " has no public constructor with Page.class parameter");
             }
         }
     }

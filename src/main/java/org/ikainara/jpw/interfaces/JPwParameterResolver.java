@@ -1,4 +1,4 @@
-package interfaces;
+package org.ikainara.jpw.interfaces;
 
 import org.junit.jupiter.api.extension.ParameterResolver;
 

@@ -1,7 +1,7 @@
-package annotations;
+package org.ikainara.jpw.annotations;
 
+import org.ikainara.jpw.extensions.InsertExtension;
 import org.junit.jupiter.api.extension.ExtendWith;
-import parameterResolvers.InsertExtension;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

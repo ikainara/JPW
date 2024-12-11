@@ -1,11 +1,11 @@
-package annotations;
+package org.ikainara.jpw.annotations;
 
 import com.microsoft.playwright.junit.OptionsFactory;
+import org.ikainara.jpw.parameterResolvers.PwPageParameterResolver;
 import org.junit.jupiter.api.extension.ExtendWith;
-import parameterResolvers.BrowserContextParameterResolver;
-import parameterResolvers.BrowserParameterResolver;
-import parameterResolvers.PlaywrightParameterResolver;
-import parameterResolvers.PwPageParameterResolver;
+import org.ikainara.jpw.parameterResolvers.BrowserContextParameterResolver;
+import org.ikainara.jpw.parameterResolvers.BrowserParameterResolver;
+import org.ikainara.jpw.parameterResolvers.PlaywrightParameterResolver;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

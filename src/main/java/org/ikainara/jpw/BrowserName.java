@@ -1,4 +1,4 @@
-package parameterResolvers;
+package org.ikainara.jpw;
 
 import java.util.List;
 
